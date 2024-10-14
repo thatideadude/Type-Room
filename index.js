@@ -86,11 +86,11 @@ let input = document.getElementById('js-input-element');
     changeBackground = () => {
 
       const images = [
-        'url("https://drive.google.com/thumbnail?id=15RpKQnCvpisFUEhSnhAWVUq7VLrjQFVH&sz=w1000")',
-        'url("https://drive.google.com/thumbnail?id=15RpKQnCvpisFUEhSnhAWVUq7VLrjQFVH&sz=w1000")',
-        'url("https://drive.google.com/thumbnail?id=1SWPCxL-DiXvt30W0BEhZeW5sE-tSDJzQ&sz=w1000")',
-        'url("https://drive.google.com/thumbnail?id=102JHgpA1sVVqhQYU61OygN7I8Wld-x8g&sz=w1000")',
-        'url("https://drive.google.com/thumbnail?id=17PBKPWlOl5XBPkzKVl9KoEtbdNMWlOhm&sz=w1000")'
+        'url("https://drive.google.com/thumbnail?id=15RpKQnCvpisFUEhSnhAWVUq7VLrjQFVH&sz=w3000")',
+        'url("https://drive.google.com/thumbnail?id=15RpKQnCvpisFUEhSnhAWVUq7VLrjQFVH&sz=w3000")',
+        'url("https://drive.google.com/thumbnail?id=1SWPCxL-DiXvt30W0BEhZeW5sE-tSDJzQ&sz=w3000")',
+        'url("https://drive.google.com/thumbnail?id=102JHgpA1sVVqhQYU61OygN7I8Wld-x8g&sz=w3000")',
+        'url("https://drive.google.com/thumbnail?id=17PBKPWlOl5XBPkzKVl9KoEtbdNMWlOhm&sz=w3000")'
       ]
 
       section.style.backgroundImage = images[bgNumber];
