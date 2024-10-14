@@ -1,4 +1,4 @@
-let input = document.getElementById('js-input-element');
+    let input = document.getElementById('js-input-element');
     let render = document.querySelector('.js-text-span');
     let textrender = '';
     let text
