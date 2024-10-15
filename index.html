@@ -11,9 +11,6 @@
 
 <body id="body">
   <div class="container">
-    <!-- <video id=bg-video autoplay loop muted 
-      src="1.mp4"
-      frameBorder=0 allowFullScreen allow=autoplay /></video> -->
     <div class="textrender">
       <div class="textrender2">
         <p class="textrender-element js-textrender-element">
@@ -35,6 +32,7 @@
           text = input.value;
           render.innerHTML = text;
       "></textarea>
+      <!-- We load all the audio files so that there's no lag on pressing keys -->
       <audio id="keypress-1.0" controls style="display: none">
         <source src="sounds/keypress-1.0.mp3" type="audio/mpeg">
       </audio>
