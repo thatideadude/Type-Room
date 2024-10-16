@@ -21,8 +21,9 @@ input.select();
 //Makes sure that after we use the buttons, we can start writing right away
 window.addEventListener('click', () => {
   input.focus();
+  iconsDiv.classList.add('mouse-movement');
   clearTimeout(timeoutId);
-  timeoutId = setTimeout(() => { iconsDiv.classList.remove('mouse-movement'); section.style.cursor = "none"; }, 5000);
+  timeoutId = setTimeout(() => { iconsDiv.classList.remove('mouse-movement'); section.style.cursor = "none"; }, 2000);
 });
 
 
@@ -84,9 +85,8 @@ window.addEventListener("mousemove", () => {
 //Flashes icons when clicked 
 flashIcon = (id) => {
   document.querySelector(`.js-icon-${id}`).classList.add('clicked');
-  clearTimeout(timeout2);
-  timeoutId2 = setTimeout(() => { 
-    document.querySelector(`.js-icon-${id}`).classList.remove('clicked')}, 150);
+  clearTimeout(timeoutId2);
+  timeoutId2 = setTimeout(() => { document.querySelector(`.js-icon-${id}`).classList.remove('clicked')}, 200);
 };
 
 //Loops through backgrounds and font stylings 
