@@ -19,13 +19,22 @@
       </div>
     </div>
     <div class="icons js-icons icons-div">
-      <img onclick="flashIcon(1)" class="js-icon-1 image-style-1" id="js-icon-1"
-        src="images/keyboard.png">
-      <img onclick="flashIcon(2)" class="js-icon-2 image-style-1" id="js-icon-2" src="images/playarrow.png">
-      <img onclick="flashIcon(3); changeBackground()" class="js-icon-3 image-style-1" id="js-icon-3" class="icon js-icon"
-        src="images/bgimage.png">
-      <img onclick="flashIcon(4)" id="js-icon-4" class="js-icon-4 image-style-1" id="js-icon-4" src="images/fullscreenon.png">
-      <img onclick="flashIcon(5)" class="js-icon-5 image-style-1" id="js-icon-5" src="images/download.png">
+      <div class="icon-div-1 icon-divs">
+        <img onclick="flashIcon(1)" class="js-icon-1 image-style-1" id="js-icon-1" src="images/keyboard.png">
+      </div>
+      <div class="icon-div-2 icon-divs">
+        <img onclick="flashIcon(2)" class="js-icon-2 image-style-1" id="js-icon-2" src="images/playarrow.png">
+      </div>
+      <div class="icon-div-3 icon-divs">
+        <img onclick="flashIcon(3); changeBackground()" class="js-icon-3 image-style-1" id="js-icon-3"
+          class="icon js-icon" src="images/bgimage.png">
+      </div>
+      <div class="icon-div-4 icon-divs">
+        <img onclick="flashIcon(4)" id="js-icon-4" class="js-icon-4 image-style-1" id="js-icon-4" src="images/fullscreenon.png">
+      </div>
+      <div class="icon-div-5 icon-divs">
+        <img onclick="flashIcon(5)" class="js-icon-5 image-style-1" id="js-icon-5" src="images/download.png">
+      </div>
     </div>
     <div class="inputarea">
       <textarea class="input-element js-input-element" id="js-input-element" onkeyup=" 
@@ -33,18 +42,19 @@
           render.innerHTML = text;
       "></textarea>
       <!-- We load all the audio files and images so that there's no lag later on -->
+
       <image class="inactive-image" src="1.jpg"></image>
       <image class="inactive-image" src="2.jpg"></image>
       <image class="inactive-image" src="3.jpg"></image>
       <image class="inactive-image" src="4.jpg"></image>
       <image class="inactive-image" src="5.jpg"></image>
-      <audio id="keypress-1.0"  class="audio">
+      <audio id="keypress-1.0" class="audio">
         <source src="sounds/keypress-1.0.mp3" type="audio/mpeg">
       </audio>
       <audio id="keypress-1.1" class="audio">
         <source src="sounds/keypress-1.1.mp3" type="audio/mpeg">
       </audio>
-      <audio id="keypress-1.2" class="audio"> 
+      <audio id="keypress-1.2" class="audio">
         <source src="sounds/keypress-1.2.mp3" type="audio/mpeg">
       </audio>
       <audio id="keypress-1.3" class="audio">
@@ -149,7 +159,7 @@
       <audio id="ambient-4" loop class="audio">
         <source src="sounds/ambient-4.mp3">
       </audio>
-      
+
     </div>
   </div>
 
