@@ -28,7 +28,6 @@ input.addEventListener('keydown', (event) => {
   if (event.key === "Enter") {
     document.getElementById(`return-${typingSounds}`).play();
     input.value = input.value + " <br>";
-    crossoutLastWord();
 
   } else if (event.key === "Backspace") {
     event.preventDefault()
@@ -110,17 +109,143 @@ changeBackground = () => {
 
 //Updates icons for when the background image changes
 function updateIcons() {
-  document.getElementById('js-icon-1')
-    .src = `images/keyboard-${bgNumber}.png`;
-  document.getElementById('js-icon-2')
-    .src = `images/playarrow-${bgNumber}.png`;
-  document.getElementById('js-icon-3')
-    .src = `images/bgimage-${bgNumber}.png`;
-  document.getElementById('js-icon-4')
-    .src = `images/fullscreenon-${bgNumber}.png`;
-  document.getElementById('js-icon-5')
-    .src = `images/download-${bgNumber}.png`;
-}
+  if (bgNumber === 0) {
+    document.getElementById('js-icon-1')
+      .classList.remove("image-style-4");
+    document.getElementById('js-icon-1')
+      .classList.add("image-style-white");
+    document.getElementById('js-icon-2')
+      .classList.remove("image-style-4");
+    document.getElementById('js-icon-2')
+      .classList.add("image-style-white");
+    document.getElementById('js-icon-3')
+      .classList.remove("image-style-4");
+    document.getElementById('js-icon-3')
+      .classList.add("image-style-white");
+    document.getElementById('js-icon-4')
+      .classList.remove("image-style-4");
+    document.getElementById('js-icon-4')
+      .classList.add("image-style-white");
+    document.getElementById('js-icon-5')
+      .classList.remove("image-style-4");
+    document.getElementById('js-icon-5')
+      .classList.add("image-style-white");
+
+  } else if (bgNumber === 1) {
+    document.getElementById('js-icon-1')
+      .classList.remove("image-style-5");
+    document.getElementById('js-icon-1')
+      .classList.add("image-style-white");
+    document.getElementById('js-icon-2')
+      .classList.remove("image-style-5");
+    document.getElementById('js-icon-2')
+      .classList.add("image-style-white");
+    document.getElementById('js-icon-3')
+      .classList.remove("image-style-5");
+    document.getElementById('js-icon-3')
+      .classList.add("image-style-white");
+    document.getElementById('js-icon-4')
+      .classList.remove("image-style-5");
+    document.getElementById('js-icon-4')
+      .classList.add("image-style-white");
+    document.getElementById('js-icon-5')
+      .classList.remove("image-style-5");
+    document.getElementById('js-icon-5')
+      .classList.add("image-style-white");
+  } else {
+    const oldBgNum = bgNumber - 1;
+    document.getElementById('js-icon-1')
+      .classList.remove(`image-style-${oldBgNum}`);
+    document.getElementById('js-icon-1')
+      .classList.add("image-style-white");
+    document.getElementById('js-icon-2')
+      .classList.remove(`image-style-${oldBgNum}`);
+    document.getElementById('js-icon-2')
+      .classList.add("image-style-white");
+    document.getElementById('js-icon-3')
+      .classList.remove(`image-style-${oldBgNum}`);
+    document.getElementById('js-icon-3')
+      .classList.add("image-style-white");
+    document.getElementById('js-icon-4')
+      .classList.remove(`image-style-${oldBgNum}`);
+    document.getElementById('js-icon-4')
+      .classList.add("image-style-white");
+    document.getElementById('js-icon-5')
+      .classList.remove(`image-style-${oldBgNum}`);
+    document.getElementById('js-icon-5')
+      .classList.add("image-style-white");
+  }
+
+  setTimeout(() => {
+    if (bgNumber === 0) {
+      document.getElementById('js-icon-1')
+        .classList.remove("image-style-white");
+      document.getElementById('js-icon-1')
+        .classList.add("image-style-5");
+      document.getElementById('js-icon-2')
+        .classList.remove("image-style-white");
+      document.getElementById('js-icon-2')
+        .classList.add("image-style-5");
+      document.getElementById('js-icon-3')
+        .classList.remove("image-style-white");
+      document.getElementById('js-icon-3')
+        .classList.add("image-style-5");
+      document.getElementById('js-icon-4')
+        .classList.remove("image-style-white");
+      document.getElementById('js-icon-4')
+        .classList.add("image-style-5");
+      document.getElementById('js-icon-5')
+        .classList.remove("image-style-white");
+      document.getElementById('js-icon-5')
+        .classList.add("image-style-5");
+
+    } else if (bgNumber === 1) {
+      document.getElementById('js-icon-1')
+        .classList.remove("image-style-white");
+      document.getElementById('js-icon-1')
+        .classList.add("image-style-1");
+      document.getElementById('js-icon-2')
+        .classList.remove("image-style-white");
+      document.getElementById('js-icon-2')
+        .classList.add("image-style-1");
+      document.getElementById('js-icon-3')
+        .classList.remove("image-style-white");
+      document.getElementById('js-icon-3')
+        .classList.add("image-style-1");
+      document.getElementById('js-icon-4')
+        .classList.remove("image-style-white");
+      document.getElementById('js-icon-4')
+        .classList.add("image-style-1");
+      document.getElementById('js-icon-5')
+        .classList.remove("image-style-white");
+      document.getElementById('js-icon-5')
+        .classList.add("image-style-1");
+    } else {
+      const oldBgNum = bgNumber - 1;
+      document.getElementById('js-icon-1')
+        .classList.remove("image-style-white");
+      document.getElementById('js-icon-1')
+        .classList.add(`image-style-${bgNumber}`);
+      document.getElementById('js-icon-2')
+        .classList.remove("image-style-white");
+      document.getElementById('js-icon-2')
+        .classList.add(`image-style-${bgNumber}`);
+      document.getElementById('js-icon-3')
+        .classList.remove("image-style-white");
+      document.getElementById('js-icon-3')
+        .classList.add(`image-style-${bgNumber}`);
+      document.getElementById('js-icon-4')
+        .classList.remove("image-style-white");
+      document.getElementById('js-icon-4')
+        .classList.add(`image-style-${bgNumber}`);
+      document.getElementById('js-icon-5')
+        .classList.remove("image-style-white");
+      document.getElementById('js-icon-5')
+        .classList.add(`image-style-${bgNumber}`);
+    }
+  });
+};
+
 
 //Matches font style with background images
 function changeTypingStyles() {
@@ -149,11 +274,15 @@ document.querySelector('.js-icon-4')
     if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen();
       document.getElementById('js-icon-4')
-        .src = `images/fullscreenoff-${bgNumber}.png`;
+        .src = `images/fulscreenoff.png`;
+      document.getElementById('js-icon-4')
+        .classList.add(`image-style-${bgNumber}`);
     } else if (document.exitFullscreen) {
       document.exitFullscreen();
       document.getElementById('js-icon-4')
-        .src = `images/fullscreenon-${bgNumber}.png`
+        .src = `images/fullscreenon.png`
+      document.getElementById('js-icon-4')
+        .classList.add(`image-style-${bgNumber}`);
     }
   });
 
@@ -186,11 +315,15 @@ function playAtmos() {
 function changeAtmosIcon() {
   if (atmos === 5) {
     document.getElementById('js-icon-2')
-      .src = `images/mute-${bgNumber}.png`;
+      .src = `images/mute.png`;
   } else {
     document.getElementById('js-icon-2')
-      .src = `images/playarrow-${bgNumber}.png`;
+      .src = `images/playarrow.png`;
   }
+  document.getElementById('js-icon-2')
+    .classList.remove(`image-style-${bgNumber}`);
+  document.getElementById('js-icon-2')
+    .classList.add(`image-style-${bgNumber}`);
 };
 
 //Browses through typewriter sounds
@@ -198,16 +331,20 @@ document.querySelector('.js-icon-1').addEventListener('click', () => {
   if (typingSounds === 3) {
     typingSounds = 1;
     document.getElementById('js-icon-1')
-      .src = `images/keyboard-${bgNumber}.png`;
+      .src = `images/keyboard.png`;
 
   } else if (typingSounds === 2) {
     typingSounds++;
     document.getElementById('js-icon-1')
-      .src = `images/mute-${bgNumber}.png`;
+      .src = `images/mute.png`;
 
   } else if (typingSounds === 1) {
     typingSounds++;
     document.getElementById('js-icon-1')
-      .src = `images/keyboard-${bgNumber}.png`;
+      .src = `images/keyboard.png`;
   }
+  document.getElementById('js-icon-1')
+    .classList.remove(`image-style-${bgNumber}`);
+  document.getElementById('js-icon-1')
+    .classList.add(`image-style-${bgNumber}`);
 });
