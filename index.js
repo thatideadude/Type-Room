@@ -7,7 +7,7 @@ let input = document.getElementById('js-input-element'),
   bgNumber = 1,
   section = document.querySelector('body'),
   typingSounds = 1;
-  atmos = 1,
+atmos = 1,
   previousAtmos = 0;
 
 const iconsDiv = document.querySelector('.js-icons');
@@ -21,6 +21,8 @@ input.select();
 //Makes sure that after we use the buttons, we can start writing right away
 window.addEventListener('click', () => {
   input.focus();
+  clearTimeout(timeoutId);
+  timeoutId = setTimeout(() => { iconsDiv.classList.remove('mouse-movement'); section.style.cursor = "none"; }, 5000);
 });
 
 
@@ -82,7 +84,7 @@ window.addEventListener("mousemove", () => {
 //Flashes icons when clicked 
 flashIcon = (id) => {
   document.querySelector(`.js-icon-${id}`).classList.add('clicked');
-  clearTimeout(timeoutId2);
+  clearTimeout(timeout2);
   timeoutId2 = setTimeout(() => { 
     document.querySelector(`.js-icon-${id}`).classList.remove('clicked')}, 150);
 };
