@@ -5,8 +5,6 @@ body {
   background-position: left center;
   background-size: 115% 115%;
   transition: 5000ms;
-  /* background-origin: var(event.x); */
-  /* overflow: hidden; */
 }
 
 .container {
@@ -33,7 +31,6 @@ body {
   word-break: break-all;
   flex-grow: 1;
   overflow: auto;
-  /* min-height: 0; */
 }
 
 
@@ -53,15 +50,8 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 100;
-  /* background-color: red; */
   opacity: 0;
 }
-
-.icons:hover {
-  opacity: 1;
-  
-  
-} 
 
 .mouse-movement{
   opacity: 1;
@@ -73,52 +63,49 @@ img {
   height: 2rem;
   margin: 1rem;
   cursor: pointer;
-  opacity: 1;
+
 
 }
 
 img:hover {
   width: 3.5rem;
   height: 3.5rem;
-  opacity: 1;
   transition: 500ms;
 
 }
 
 .clicked {
-  opacity: 0;
-  /* width: 3rem;
-  height: 3rem; */
+  filter: brightness(100);
+  transition: 1000ms;
 }
 
 .image-style-1  {
   filter: invert(100%) sepia(3%) saturate(224%) hue-rotate(187deg) brightness(116%) contrast(92%);
-  opacity: 1;
+
 }
 
 .image-style-2 {
   filter: invert(95%) sepia(12%) saturate(218%) hue-rotate(200deg) brightness(93%) contrast(87%);
-  opacity: 1;
+
 }
 
 .image-style-3 {
   filter: invert(35%) sepia(36%) saturate(3327%) hue-rotate(343deg) brightness(92%) contrast(98%);
-  opacity: 1
+
 }
 
 .image-style-4 {
   filter: invert(62%) sepia(26%) saturate(912%) hue-rotate(328deg) brightness(98%) contrast(90%);
-  opacity: 1;
+
 }
 
 .image-style-5 {
   filter: invert(88%) sepia(8%) saturate(506%) hue-rotate(94deg) brightness(91%) contrast(88%);
-  opacity: 1;
+
 }
 
 .image-style-white {
   filter: brightness(100%);
-  opacity: 0
 }
 
 span {
