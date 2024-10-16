@@ -7,7 +7,7 @@ let input = document.getElementById('js-input-element'),
   bgNumber = 1,
   section = document.querySelector('body'),
   typingSounds = 1;
-atmos = 1,
+  atmos = 1,
   previousAtmos = 0;
 
 const iconsDiv = document.querySelector('.js-icons');
