@@ -51,6 +51,7 @@ body {
   align-items: center;
   z-index: 100;
   opacity: 0;
+  transition: 1000ms;
 }
 
 .mouse-movement{
@@ -63,8 +64,6 @@ img {
   height: 2rem;
   margin: 1rem;
   cursor: pointer;
-
-
 }
 
 img:hover {
@@ -75,8 +74,9 @@ img:hover {
 }
 
 .clicked {
-  filter: brightness(100);
-  transition: 1000ms;
+  opacity: 0;
+  transition: 10s;
+
 }
 
 .image-style-1  {
