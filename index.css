@@ -75,7 +75,7 @@ img:hover {
 
 .clicked {
   opacity: 0;
-  transition: 10s;
+  transition: 10ms;
 
 }
 
