@@ -66,7 +66,6 @@ function crossoutLastWord() {
   newText.reverse();
   text = newText.join(" ");
   input.value = text + ' ';
-  console.log(text);
 }
 
 //Shows bottom icons when moving the mouse
@@ -142,7 +141,6 @@ function changeTypingStyles() {
     document.getElementById('js-text-span')
       .classList.add(`text-span-${bgNumber}`);
   }
-  console.log(document.getElementById('js-text-span'));
 }
 
 //Fullscreen button on/off
