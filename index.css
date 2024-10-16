@@ -1,8 +1,3 @@
-* {
-  margin: 0 0 0 0;
-  overflow: hidden;
-}
-
 body {
   margin: 0 0 0 0;
   background-image: url(1.jpg);
@@ -10,12 +5,12 @@ body {
   background-position: left center;
   background-size: 115% 115%;
   transition: 5000ms;
-  /* overflow: hidden; */
 }
 
 .container {
   display: grid;
   grid-template-rows: 80vh 10vh 10vh;
+  z-index:1;
 }
 
 .textrender {
@@ -57,26 +52,9 @@ body {
   opacity: 0;
   transition: 500ms;
   z-index: 100;
-}
+  /* background-color: red; */
 
-.typing-area {
-  width: 100%;
-  height: 80%; 
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;           
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.1;  /* for demo purpose  */
-  background-color: blueviolet;
-  z-index: 1000;
-  transform: translateY(40vh);
-}
-.icons {
-  z-index: 9;
-  background-color:lawngreen;
-  margin: 20px; /* for demo purpose  */
+  
 }
 
 .icons:hover {
