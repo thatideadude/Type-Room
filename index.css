@@ -55,12 +55,12 @@ body {
   opacity: 0;
   z-index: 100;
   /* background-color: red; */
-  transition: 500ms;
 }
 
 .icons:hover {
   opacity: 1;
-  transition: 500ms;
+  
+  
 } 
 
 .mouse-movement{
@@ -73,13 +73,15 @@ img {
   height: 2rem;
   margin: 1rem;
   cursor: pointer;
-  transition: 500ms;
+
 }
 
 img:hover {
   width: 3.5rem;
   height: 3.5rem;
+  opacity: 1;
   transition: 500ms;
+
 }
 
 .clicked {
@@ -90,31 +92,32 @@ img:hover {
 
 .image-style-1  {
   filter: invert(100%) sepia(3%) saturate(224%) hue-rotate(187deg) brightness(116%) contrast(92%);
-  transition: opacity 5000ms;
+  opacity: 1;
 }
 
 .image-style-2 {
   filter: invert(95%) sepia(12%) saturate(218%) hue-rotate(200deg) brightness(93%) contrast(87%);
-  transition: opacity 5000ms;
+  opacity: 1;
 }
 
 .image-style-3 {
   filter: invert(35%) sepia(36%) saturate(3327%) hue-rotate(343deg) brightness(92%) contrast(98%);
-  transition: opacity 5000ms;
+  opacity: 1
 }
 
 .image-style-4 {
   filter: invert(62%) sepia(26%) saturate(912%) hue-rotate(328deg) brightness(98%) contrast(90%);
-  transition: opacity 5000ms;
+  opacity: 1;
 }
 
 .image-style-5 {
   filter: invert(88%) sepia(8%) saturate(506%) hue-rotate(94deg) brightness(91%) contrast(88%);
-  transition: opacity 5000ms;
+  opacity: 1;
 }
 
 .image-style-white {
-  filter: brightness(100%)
+  filter: brightness(100%);
+  opacity: 0
 }
 
 span {
