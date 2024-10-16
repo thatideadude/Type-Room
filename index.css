@@ -52,9 +52,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
   z-index: 100;
   /* background-color: red; */
+  opacity: 0;
 }
 
 .icons:hover {
@@ -73,7 +73,7 @@ img {
   height: 2rem;
   margin: 1rem;
   cursor: pointer;
-  opacity:1;
+  opacity: 1;
 
 }
 
