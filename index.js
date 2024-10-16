@@ -1,13 +1,14 @@
 let input = document.getElementById('js-input-element'),
-    render = document.querySelector('.js-text-span'),
-    textrender = '',
-    text,
-    timeoutId,
-    bgNumber = 1,
-    section = document.querySelector('body'),
-    typingSounds = 1;
-    atmos = 1,
-    previousAtmos = 0;
+  render = document.querySelector('.js-text-span'),
+  textrender = '',
+  text,
+  timeoutId,
+  timeoutId2,
+  bgNumber = 1,
+  section = document.querySelector('body'),
+  typingSounds = 1;
+atmos = 1,
+  previousAtmos = 0;
 
 const iconsDiv = document.querySelector('.js-icons');
 
@@ -42,7 +43,7 @@ function generateRandomNumber() {
   return Math.floor(Math.random() * 10)
 };
 
-//This function adds a span to the last word/s(so we can style it/them in CSS). First it converts the textarea.value into an array, then checks if the last value of the array is already styled or not.
+//Adds a span to the last word/s(so we can style it/them in CSS). First it converts the textarea.value into an array, then checks if the last value of the array is already styled or not.
 function crossoutLastWord() {
 
   text = input.value.split(" ");
@@ -81,8 +82,9 @@ window.addEventListener("mousemove", () => {
 //Flashes icons when clicked 
 flashIcon = (id) => {
   document.querySelector(`.js-icon-${id}`).classList.add('clicked');
-  clearTimeout(timeoutId);
-  timeoutId = setTimeout(() => { document.querySelector(`.js-icon-${id}`).classList.remove('clicked') }, 150);
+  clearTimeout(timeoutId2);
+  timeoutId2 = setTimeout(() => { 
+    document.querySelector(`.js-icon-${id}`).classList.remove('clicked')}, 150);
 };
 
 //Loops through backgrounds and font stylings 
@@ -99,12 +101,12 @@ changeBackground = () => {
   section.style.backgroundImage = images[bgNumber];
 
   if (bgNumber < 4) {
-    bgNumber++
+    bgNumber++;
   } else {
     bgNumber = 0;
   }
   changeTypingStyles();
-  updateIcons()
+  updateIcons();
 }
 
 //Updates icons for when the background image changes
