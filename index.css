@@ -110,7 +110,6 @@ img:hover {
 
 span {
   text-decoration: line-through;
-
 }
 
 .text-span-1 {
@@ -118,7 +117,6 @@ span {
   background-color: rgba(240, 245, 245, 0.333);
   color: rgb(35, 32, 30);
   transition: 1500ms;
-
 }
 
 .text-span-2 {
@@ -127,7 +125,6 @@ span {
   mix-blend-mode: color-burn;
   color: rgb(41, 21, 13);
   transition: 1500ms;
-
 }
 
 .text-span-3 {
@@ -135,7 +132,6 @@ span {
   color: rgb(232 66 40);
   background-color: rgba(29, 28, 22, 0.726);
   transition: 1500ms;
-
 }
 
 .text-span-4 {
@@ -154,7 +150,7 @@ span {
 
 .audio {
   display: none;
-  z-index: -101
+  z-index: -101;
 }
 
 .inactive-image {
