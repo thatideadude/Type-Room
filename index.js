@@ -103,7 +103,6 @@ changeBackground = () => {
   } else {
     bgNumber = 0;
   }
-  updateIcons();
   changeTypingStyles();
   updateIcons()
 }
