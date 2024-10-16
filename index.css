@@ -10,7 +10,6 @@ body {
   background-position: left center;
   background-size: 115% 115%;
   transition: 5000ms;
-  /* background-origin: var(event.x); */
   /* overflow: hidden; */
 }
 
