@@ -421,13 +421,13 @@ if (typingSounds === 3) {
 function updateAmbienceTooltip() {
   const tooltip = document.getElementById('button-2');
   if (atmos === 4) {
-    tooltip.setAttribute('data-tooltip', 'rain');
+    tooltip.setAttribute('data-tooltip', 'cafe');
   } else if (atmos === 1) {
     tooltip.setAttribute('data-tooltip', 'rain');
   } else if (atmos === 2) {
     tooltip.setAttribute('data-tooltip', 'fireplace');
   } else if (atmos === 3) {
-    tooltip.setAttribute('data-tooltip', 'coffee shop');
+    tooltip.setAttribute('data-tooltip', 'ocean');
   } else {
     tooltip.setAttribute('data-tooltip', 'no ambience');
   }
