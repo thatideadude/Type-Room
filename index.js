@@ -423,7 +423,7 @@ function updateAmbienceTooltip() {
   if (atmos === 4) {
     tooltip.setAttribute('data-tooltip', 'cafe');
   } else if (atmos === 1) {
-    tooltip.setAttribute('data-tooltip', ' rain');
+    tooltip.setAttribute('data-tooltip', '  rain');
   } else if (atmos === 2) {
     tooltip.setAttribute('data-tooltip', 'fireplace');
   } else if (atmos === 3) {
