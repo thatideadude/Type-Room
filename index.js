@@ -1,15 +1,15 @@
 let input = document.getElementById('js-input-element'),
-    render = document.querySelector('.js-text-span'),
-    textrender = '',
-    text,
-    timeoutId,
-    timeoutId2,
-    bgNumber = 1,
-    section = document.querySelector('body'),
-    typingSounds = 1;
-    atmos = 1,
-    previousAtmos = 0;
-    fullscreen = 'off';
+  render = document.querySelector('.js-text-span'),
+  textrender = '',
+  text,
+  timeoutId,
+  timeoutId2,
+  bgNumber = 1,
+  section = document.querySelector('body'),
+  typingSounds = 1;
+  atmos = 1,
+  previousAtmos = 0;
+  fullscreen = 'off';
 
 const iconsDiv = document.querySelector('.js-icons');
 
@@ -427,7 +427,7 @@ function updateAmbienceTooltip() {
   } else if (atmos === 2) {
     tooltip.setAttribute('data-tooltip', 'fireplace');
   } else if (atmos === 3) {
-    tooltip.setAttribute('data-tooltip', 'ocean');
+    tooltip.setAttribute('data-tooltip', 'coffee shop');
   } else {
     tooltip.setAttribute('data-tooltip', 'no ambience');
   }
