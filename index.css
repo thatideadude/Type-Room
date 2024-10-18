@@ -51,6 +51,7 @@ body {
 }
 
 button {
+  padding: 3rem 0rem 0rem 0rem;
   border: none;
   background-color: transparent;
   position:relative;
@@ -83,7 +84,7 @@ img {
   height: 2rem;
   margin: 1rem;
   cursor: pointer;
-  transition: 500ms
+  transition: 500ms;
 }
 
 img:hover {
@@ -137,11 +138,6 @@ span {
 
 /* Tooltip */
 
-button {
-  position: relative;
-  cursor: pointer;
-}
-
 .button-style-1:after,
 .button-style-2:after,
 .button-style-3:after,
@@ -157,9 +153,9 @@ button {
   width: 9rem;
   margin-left: -4.9rem;
   padding: 0.4rem 0.2rem;
-  border-radius: 0.5rem;
   transform: translateY(50%);
   pointer-events: all;
+  cursor: pointer;
   transition: 500ms;
 }
 
@@ -240,4 +236,3 @@ button {
   display: none;
   z-index: -100;
 }
-
