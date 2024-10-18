@@ -7,9 +7,9 @@ let input = document.getElementById('js-input-element'),
   bgNumber = 1,
   section = document.querySelector('body'),
   typingSounds = 1;
-  atmos = 1,
+atmos = 1,
   previousAtmos = 0;
-  fullscreen = 'off';
+fullscreen = 'off';
 
 const iconsDiv = document.querySelector('.js-icons');
 
@@ -35,38 +35,38 @@ window.addEventListener('click', () => {
 input.addEventListener('keydown', (event) => {
   if (event.key === "Enter") {
     document.getElementById(`return-${typingSounds}`).play();
-    input.value = input.value + " <br>";
+    input.value = input.value + " <br> ";
 
   } else if (event.key === "Backspace") {
     event.preventDefault()
     crossoutLastWord();
   } else if (event.key === 'CapsLock'
-      || event.key === 'Shift'
-      || event.key === 'Tab'
-      || event.key === 'Backquote'
-      || event.key === 'ControlLeft'
-      || event.key === 'ControlRight'
-      || event.key === 'Meta'
-      || event.key === 'ArrowDown'
-      || event.key === 'ArrowRight'
-      || event.key === 'ArrowUp'
-      || event.key === 'ArrowLeft'
-      || event.key === 'Home'
-      || event.key === 'PageDown'
-      || event.key === 'PageUp'
-      || event.key === 'Clear'
-      || event.key === 'Copy'
-      || event.key === 'Cut'
-      || event.key === 'Delete'
-      || event.key === 'EraseEof'
-      || event.key === 'Paste'
-      || event.key === 'Undo'
-      || event.key === '>'
-      || event.key === '<'
-      || event.key === 'AltLeft'
-      || event.key === 'AltRight'
-      || event.key === 'Escape'
-    ) {
+    || event.key === 'Shift'
+    || event.key === 'Tab'
+    || event.key === 'Backquote'
+    || event.key === 'ControlLeft'
+    || event.key === 'ControlRight'
+    || event.key === 'Meta'
+    || event.key === 'ArrowDown'
+    || event.key === 'ArrowRight'
+    || event.key === 'ArrowUp'
+    || event.key === 'ArrowLeft'
+    || event.key === 'Home'
+    || event.key === 'PageDown'
+    || event.key === 'PageUp'
+    || event.key === 'Clear'
+    || event.key === 'Copy'
+    || event.key === 'Cut'
+    || event.key === 'Delete'
+    || event.key === 'EraseEof'
+    || event.key === 'Paste'
+    || event.key === 'Undo'
+    || event.key === '>'
+    || event.key === '<'
+    || event.key === 'AltLeft'
+    || event.key === 'AltRight'
+    || event.key === 'Escape'
+  ) {
     event.preventDefault();
   } else {
     document.getElementById(`keypress-${typingSounds}.${generateRandomNumber()}`).play();
@@ -298,124 +298,124 @@ function updateTooltipStyles() {
         button.classList.add(`button-style-${bgNumber}`);
       }
     })
+}
+
+//Matches font style with background images
+function changeTypingStyles() {
+  if (bgNumber === 0) {
+    document.getElementById('js-text-span')
+      .classList.remove('text-span-4');
+    document.getElementById('js-text-span')
+      .classList.add('text-span-5')
+  } else if (bgNumber === 1) {
+    document.getElementById('js-text-span')
+      .classList.remove('text-span-5');
+    document.getElementById('js-text-span')
+      .classList.add('text-span-1')
+  } else {
+    const oldBgNum = bgNumber - 1;
+    document.getElementById('js-text-span')
+      .classList.remove(`text-span-${oldBgNum}`);
+    document.getElementById('js-text-span')
+      .classList.add(`text-span-${bgNumber}`);
   }
+}
 
-  //Matches font style with background images
-  function changeTypingStyles() {
-    if (bgNumber === 0) {
-      document.getElementById('js-text-span')
-        .classList.remove('text-span-4');
-      document.getElementById('js-text-span')
-        .classList.add('text-span-5')
-    } else if (bgNumber === 1) {
-      document.getElementById('js-text-span')
-        .classList.remove('text-span-5');
-      document.getElementById('js-text-span')
-        .classList.add('text-span-1')
-    } else {
-      const oldBgNum = bgNumber - 1;
-      document.getElementById('js-text-span')
-        .classList.remove(`text-span-${oldBgNum}`);
-      document.getElementById('js-text-span')
-        .classList.add(`text-span-${bgNumber}`);
-    }
-  }
-
-  //Fullscreen button on/off
-  document.getElementById('button-4')
-    .addEventListener('click', () => {
-      if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen();
-        document.getElementById('js-icon-4')
-          .src = `images/fullscreenoff.png`;
-        document.getElementById('js-icon-4')
-          .classList.add(`image-style-${bgNumber}`);
-          updateFullscreenTooltip();
-      } else if (document.exitFullscreen) {
-        document.exitFullscreen();
-        document.getElementById('js-icon-4')
-          .src = `images/fullscreenon.png`
-        document.getElementById('js-icon-4')
-          .classList.add(`image-style-${bgNumber}`);
-          updateFullscreenTooltip();
-      }
-    });
-
-  //Plays diffent atmospheres 
-  document.getElementById('button-2').addEventListener('click', () => {
-    updateAmbienceTooltip();
-    playAtmos();
-    changeAtmosIcon();
-    atmos++;
-    previousAtmos++;
-
-    if (atmos === 6 && previousAtmos === 5) {
-      atmos = 1;
-      previousAtmos = 0
+//Fullscreen button on/off
+document.getElementById('button-4')
+  .addEventListener('click', () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+      document.getElementById('js-icon-4')
+        .src = `images/fullscreenoff.png`;
+      document.getElementById('js-icon-4')
+        .classList.add(`image-style-${bgNumber}`);
+      updateFullscreenTooltip();
+    } else if (document.exitFullscreen) {
+      document.exitFullscreen();
+      document.getElementById('js-icon-4')
+        .src = `images/fullscreenon.png`
+      document.getElementById('js-icon-4')
+        .classList.add(`image-style-${bgNumber}`);
+      updateFullscreenTooltip();
     }
   });
 
-  function playAtmos() {
-    if (atmos === 1) {
-      document.getElementById(`ambient-${atmos}`).play()
+//Plays diffent atmospheres 
+document.getElementById('button-2').addEventListener('click', () => {
+  updateAmbienceTooltip();
+  playAtmos();
+  changeAtmosIcon();
+  atmos++;
+  previousAtmos++;
 
-    } else if (atmos === 2 || atmos === 3 || atmos === 4) {
-      document.getElementById(`ambient-${previousAtmos}`).pause();
-      document.getElementById(`ambient-${atmos}`).play()
+  if (atmos === 6 && previousAtmos === 5) {
+    atmos = 1;
+    previousAtmos = 0
+  }
+});
 
-    } else if (atmos === 5) {
-      document.getElementById('ambient-4').pause();
-    }
-  };
+function playAtmos() {
+  if (atmos === 1) {
+    document.getElementById(`ambient-${atmos}`).play()
 
-  function changeAtmosIcon() {
-    if (atmos === 5) {
-      document.getElementById('js-icon-2')
-        .src = `images/mute.png`;
-    } else {
-      document.getElementById('js-icon-2')
-        .src = `images/playarrow.png`;
-    }
+  } else if (atmos === 2 || atmos === 3 || atmos === 4) {
+    document.getElementById(`ambient-${previousAtmos}`).pause();
+    document.getElementById(`ambient-${atmos}`).play()
+
+  } else if (atmos === 5) {
+    document.getElementById('ambient-4').pause();
+  }
+};
+
+function changeAtmosIcon() {
+  if (atmos === 5) {
     document.getElementById('js-icon-2')
-      .classList.remove(`image-style-${bgNumber}`);
+      .src = `images/mute.png`;
+  } else {
     document.getElementById('js-icon-2')
-      .classList.add(`image-style-${bgNumber}`);
-  };
+      .src = `images/playarrow.png`;
+  }
+  document.getElementById('js-icon-2')
+    .classList.remove(`image-style-${bgNumber}`);
+  document.getElementById('js-icon-2')
+    .classList.add(`image-style-${bgNumber}`);
+};
 
-  //Browses through typewriter sounds
-  document.getElementById('button-1').addEventListener('click', () => {
-    updateKeysTooltip();
-    if (typingSounds === 3) {
-      typingSounds = 1;
-      document.getElementById('js-icon-1')
-        .src = `images/keyboard.png`;
-
-    } else if (typingSounds === 2) {
-      typingSounds++;
-      document.getElementById('js-icon-1')
-        .src = `images/mute.png`;
-
-    } else if (typingSounds === 1) {
-      typingSounds++;
-      document.getElementById('js-icon-1')
-        .src = `images/keyboard.png`;
-    }
+//Browses through typewriter sounds
+document.getElementById('button-1').addEventListener('click', () => {
+  updateKeysTooltip();
+  if (typingSounds === 3) {
+    typingSounds = 1;
     document.getElementById('js-icon-1')
-      .classList.remove(`image-style-${bgNumber}`);
+      .src = `images/keyboard.png`;
+
+  } else if (typingSounds === 2) {
+    typingSounds++;
     document.getElementById('js-icon-1')
-      .classList.add(`image-style-${bgNumber}`);
-  });
+      .src = `images/mute.png`;
+
+  } else if (typingSounds === 1) {
+    typingSounds++;
+    document.getElementById('js-icon-1')
+      .src = `images/keyboard.png`;
+  }
+  document.getElementById('js-icon-1')
+    .classList.remove(`image-style-${bgNumber}`);
+  document.getElementById('js-icon-1')
+    .classList.add(`image-style-${bgNumber}`);
+});
 
 //Change tootlip
 function updateKeysTooltip() {
   const tooltip = document.getElementById('button-1');
-if (typingSounds === 3) {
-  tooltip.setAttribute('data-tooltip', 'change keys');
-} else if (typingSounds === 1) {
-  tooltip.setAttribute('data-tooltip', 'change keys');
-} else if (typingSounds === 2) {
-  tooltip.setAttribute('data-tooltip', 'muted keys')
-}
+  if (typingSounds === 3) {
+    tooltip.setAttribute('data-tooltip', 'change keys');
+  } else if (typingSounds === 1) {
+    tooltip.setAttribute('data-tooltip', 'change keys');
+  } else if (typingSounds === 2) {
+    tooltip.setAttribute('data-tooltip', 'muted keys')
+  }
 };
 
 function updateAmbienceTooltip() {
@@ -423,7 +423,7 @@ function updateAmbienceTooltip() {
   if (atmos === 4) {
     tooltip.setAttribute('data-tooltip', 'cafe');
   } else if (atmos === 1) {
-    tooltip.setAttribute('data-tooltip', '  rain');
+    tooltip.setAttribute('data-tooltip', ' rain');
   } else if (atmos === 2) {
     tooltip.setAttribute('data-tooltip', 'fireplace');
   } else if (atmos === 3) {
@@ -442,33 +442,44 @@ function updateFullscreenTooltip() {
     tooltip.setAttribute('data-tooltip', 'fullscreen');
     fullscreen = 'off';
   }
+};
+
+//Removes all html elements from the text variable before download
+function prepareTextToDownload() {
+  text = input.value;
+  text = text.split(" ");
+  for (let i = text.length - 1; i >= 0; i--) {
+    if (text[i].includes("<span>")
+      || text[i].includes("<br>")) {
+      text.splice(i, 1);
+    };
   };
+  return text.join(" ");
+};
 
-  function downloadFile(filename, content) {
+//Creates blob with the text variable as text
+function downloadFile(filename, content) {
 
-    const element = document.createElement('a');
+  const element = document.createElement('a');
 
-    const blob = new Blob ([content], {
-      type: 'plain/text'
-    });
+  const blob = new Blob([content], {
+    type: 'plain/text'
+  });
 
-    const fileURL = URL.createObjectURL(blob);
+  const fileURL = URL.createObjectURL(blob);
 
-    element.setAttribute('href', fileURL);
-    element.setAttribute('download', filename);
+  element.setAttribute('href', fileURL);
+  element.setAttribute('download', filename);
 
-    element.style.display = 'none';
+  element.style.display = 'none';
 
-    document.body.appendChild(element);
-    element.click();
-  };
+  document.body.appendChild(element);
+  element.click();
+};
 
-
-    document.getElementById('button-5').addEventListener('click', e => {
-      const filename = 'New Document.txt';
-      const content = input.value;
-
-    if (content) {
-      downloadFile(filename, content);
-    }  
-    })
+//Sets up the download button
+document.getElementById('button-5').addEventListener('click', e => {
+  const filename = 'New Document.txt';
+  const content = prepareTextToDownload();
+  downloadFile(filename, content);
+});
