@@ -190,7 +190,6 @@ span {
   mix-blend-mode: color-burn;
   color: rgb(57, 20, 5);
   transition: 1500ms;
-
 }
 
 .button-style-3:after {
@@ -202,7 +201,6 @@ span {
   color: rgb(232 66 40);
   background-color: rgba(29, 28, 22, 0);
   transition: 1500ms;
-
 }
 
 .button-style-4:after {
@@ -236,4 +234,3 @@ span {
   display: none;
   z-index: -100;
 }
-
