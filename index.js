@@ -83,19 +83,21 @@ function crossoutLastWord() {
   text = input.value.split(" ");
   text.reverse();
   let newText = [];
-  let loopCount = 1;
+  let loopCount = 1; 
 
   text.forEach((word) => {
-    if (!word.includes('</span>') && word !== '' && loopCount === 1) {
+    if (!word.includes('</span>') && word !== "" && word !== " " && !word.includes('<br>') && loopCount === 1) {
       word = `<span>${word}</span>`;
       newText.push(word);
       loopCount++;
-    } else if (word === ' ') {
+    } else if (word === ' ' && word === '') {
       text.splice(indexOf(word));
     } else {
       newText.push(word);
     }
   })
+
+  
 
   newText.reverse();
   text = newText.join(" ");
@@ -449,15 +451,19 @@ function prepareTextToDownload() {
   text = input.value;
   text = text.split(" ");
   for (let i = text.length - 1; i >= 0; i--) {
-    if (text[i].includes("<span>")
-      || text[i].includes("<br>")) {
-      text.splice(i, 1);
-    };
+    if (text[i].includes("<span>")) 
+      { text.splice(i, 1);
+    } else if (text[i].includes('<br>')) {
+      text[i] = `\r${text[i+1]}`;
+      text.splice(i+1, 1);
+    }
   };
-  return text.join(" ");
+  
+  text = text.join(" ");
+  return text;
 };
 
-//Creates blob with the text variable as text
+//Creates blob with the text variable as .txt
 function downloadFile(filename, content) {
 
   const element = document.createElement('a');
